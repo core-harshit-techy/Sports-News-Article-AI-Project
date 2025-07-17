@@ -1,0 +1,10 @@
+Flask==2.3.3
+PyMuPDF==1.23.5
+sentence-transformers==2.2.2
+faiss-cpu==1.7.4
+python-dotenv==1.0.0
+requests==2.31.0
+Werkzeug==2.3.7
+numpy==1.24.3
+torch==2.0.1
+transformers==4.33.2
