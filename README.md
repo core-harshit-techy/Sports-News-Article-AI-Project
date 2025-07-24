@@ -11,6 +11,7 @@ A modern Flask web application that transforms match PDFs into professional spor
 - 💬 **Interactive Chatbot**: Ask questions about the uploaded match
 - 🎨 **Modern UI**: Responsive design with smooth animations
 - 🔍 **Vector Search**: FAISS-powered similarity search for accurate responses
+<img width="1328" height="593" alt="Screenshot 2025-07-16 213352" src="https://github.com/user-attachments/assets/d376fae6-0d4e-4c30-b5b5-215a6c6578fb" />
 
 ## 🚀 Quick Start
 
