@@ -1,0 +1,51 @@
+# .gitlab-ci.yml for Flask Sports PDF Analysis App
+
+stages:
+  - install
+  - test
+  - lint
+  - build
+
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+  FLASK_ENV: "testing"
+  PYTHONUNBUFFERED: 1
+
+cache:
+  paths:
+    - .cache/pip
+
+before_script:
+  - python --version
+  - pip install --upgrade pip
+  - pip install -r requirements.txt
+
+install:
+  stage: install
+  script:
+    - echo "Dependencies installed."
+  tags: ["python"]
+
+lint:
+  stage: lint
+  script:
+    - pip install flake8
+    - flake8 app.py utils.py test_setup.py
+  tags: ["python"]
+
+build:
+  stage: build
+  script:
+    - echo "Build step (placeholder)."
+  tags: ["python"]
+
+unit_test:
+  stage: test
+  script:
+    - python test_setup.py
+  tags: ["python"]
+  artifacts:
+    when: always
+    paths:
+      - test-reports/
+    expire_in: 1 week
